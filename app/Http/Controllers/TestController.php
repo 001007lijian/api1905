@@ -17,13 +17,13 @@ class TestController extends Controller
         $sign = '';
         $timestamp = date('Y-m-d H:i:s');
         $version = '1.0';
-        $return_url = 'http://jianxiao.xx20.top/test/alipay/return';       // 支付宝同步通知
-        $notify_url = 'http://jianxiao.xx20.top/test/alipay/notify';        // 支付宝异步通知地址
+        $return_url = 'http://jianxiao.xx20.top/talipay/return';       // 支付宝同步通知
+        $notify_url = 'http://jianxiao.xx20.top/alipay/notify';        // 支付宝异步通知地址
         $biz_content = '';
         // 请求参数
         $out_trade_no = time() . rand(1111,9999);       //商户订单号
         $product_code = 'FAST_INSTANT_TRADE_PAY';
-        $total_amount = 0.01;
+        $total_amount = 1000000;
         $subject = '测试订单' . $out_trade_no;
         $request_param = [
             'out_trade_no'  => $out_trade_no,
