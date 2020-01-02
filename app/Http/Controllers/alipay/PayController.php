@@ -4,7 +4,6 @@ namespace App\Http\Controllers\alipay;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Tags\Deprecated;
 
 class PayController extends Controller
 {
@@ -67,7 +66,7 @@ class PayController extends Controller
         echo "<pre>";   print_r($_GET);  echo "</pre>";
     }
 
-    protected function verify()
+    protected function verify($data,$sign)
     {
         //读取公钥文件
         $pubKey=file_get_contents(storage_path('keys/ali_pub'));

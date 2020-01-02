@@ -18,4 +18,4 @@ Route::get('/', function () {
 Route::get('test/alipay','TestController@alipay');
 
 Route::get('alipay/return','alipay\\PayController@return');//同步
-Route::get('alipay/notify','alipay\\PayController@notify');//异步
+Route::post('alipay/notify','alipay\\PayController@notify');//异步
