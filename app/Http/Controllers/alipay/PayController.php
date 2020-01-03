@@ -58,7 +58,7 @@ class PayController extends Controller
             file_put_contents("logs/alipay.log",$log,FILE_APPEND);
         }
 
-        echo '支付成功';
+        echo '成功';
     }
 
     public function return()

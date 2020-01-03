@@ -17,7 +17,7 @@ class TestController extends Controller
         $sign = '';
         $timestamp = date('Y-m-d H:i:s');
         $version = '1.0';
-        $return_url = 'http://jianxiao.xx20.top/talipay/return';       // 支付宝同步通知
+        $return_url = 'http://jianxiao.xx20.top/alipay/return';       // 支付宝同步通知
         $notify_url = 'http://jianxiao.xx20.top/alipay/notify';        // 支付宝异步通知地址
         $biz_content = '';
         // 请求参数
