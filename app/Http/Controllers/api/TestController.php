@@ -75,20 +75,7 @@ class TestController extends Controller
 
     public function userList()
     {
-        $user_token = $_SERVER['HTTP_TOKEN'];
-        echo 'user_token: '.$user_token;echo '</br>';
-        $current_url = $_SERVER['REQUEST_URI'];
-        echo "当前URL: ".$current_url;echo '<hr>';
-        $redis_key = 'str:count:u:'.$user_token.':url:'.md5($current_url);
-        echo 'redis key: '.$redis_key;echo '</br>';
-        $count = Redis::get($redis_key);
-        echo "接口的访问次数： ".$count;echo '</br>';
-        if($count >= 5){
-            echo "请不要频繁访问此接口，访问次数已到上限，请稍后再试";
-            Redis::expire($redis_key,3600);
-            die;
-        }
-        $count = Redis::incr($redis_key);
-        echo 'count: '.$count;
+        $list=UserModel::all();
+        echo "<pre>";   print_r($list->toArray());  echo "</pre>";
     }
 }
