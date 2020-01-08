@@ -88,7 +88,7 @@ class TestController extends Controller
         echo "OK";
     }
     /**
-     * 商品点击排名
+     * 商品点击排名a
      */
     public function goods2()
     {
